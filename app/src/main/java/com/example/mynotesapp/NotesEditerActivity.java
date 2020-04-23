@@ -47,7 +47,7 @@ public class NotesEditerActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
                 MainActivity.notes.set(finalNoteId, String.valueOf(s));
-             //   MainActivity.arrayAdapter.notifyDataSetChanged();
+               MainActivity.arrayAdapter.notifyDataSetChanged();
                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.mynotesapp", Context.MODE_PRIVATE);
                 //Set
                 HashSet<String> set = new HashSet<>(MainActivity.notes);
